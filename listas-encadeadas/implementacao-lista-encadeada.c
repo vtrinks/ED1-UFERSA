@@ -6,8 +6,6 @@ typedef struct aluno{
     char nome[50];    
 }Alunos;
 
-// A: 15 minutos
-
 void cadastrar (int quantidade_aluno){
     FILE *arquivo = fopen ("dados.dat", "wb");
     Alunos aluno_lido;
@@ -22,8 +20,6 @@ void cadastrar (int quantidade_aluno){
     fclose(arquivo);
 }
 
-// B: 13 minutos
-
 void imprimir (void){
 FILE *arquivo = fopen("dados.dat", "rb");
 Alunos aluno_lido;
@@ -33,8 +29,6 @@ while(fread (&aluno_lido, sizeof (Alunos), 1, arquivo)){
 }
 fclose(arquivo);
 }
-
-// C: 15 minutos
 
 void contar (void){
     FILE *arquivo = fopen ("dados.dat", "rb");
